@@ -127,14 +127,19 @@ allowfullscreen>
     Home
 </button>
 
-    <script>
+  <button class="home-button" onclick="goToPage('index.html')">
+    Home
+</button>
+
+<script>
 function goToPage(page){
     document.body.style.opacity = "0";
 
-    setTimeout(() => {
+    setTimeout(function(){
         window.location.href = page;
     }, 400);
 }
+</script>
 
 <script>
 function goToPage(page){
