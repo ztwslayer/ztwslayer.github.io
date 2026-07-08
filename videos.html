@@ -43,6 +43,23 @@ body{
 }
 
 .video-card{
+    animation: cardFade 0.5s ease;
+}
+
+@keyframes cardFade{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+    
+    
+    .video-card{
     background:#232428;
     padding:25px;
     border-radius:15px;
@@ -106,7 +123,7 @@ allowfullscreen>
 
 </div>
 
-<button class="home-button" onclick="window.location.href='index.html'">
+<button class="home-button" onclick="goToPage('index.html')">
     Home
 </button>
 
@@ -114,15 +131,21 @@ allowfullscreen>
     Videos
 </button>
 
-    <button class="home-button" onclick="goToPage('index.html')">
-    Home
-</button>
 
     <script>
 function goToPage(page){
     document.body.style.opacity = "0";
 
     setTimeout(() => {
+        window.location.href = page;
+    }, 400);
+}
+
+<script>
+function goToPage(page){
+    document.body.style.opacity = "0";
+
+    setTimeout(function(){
         window.location.href = page;
     }, 400);
 }
