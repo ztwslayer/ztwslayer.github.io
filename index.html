@@ -85,6 +85,34 @@ body{
     gap:10px;
 }
 
+.videos-button{
+    position:fixed;
+    bottom:25px;
+    right:25px;
+
+    padding:12px 25px;
+    border:none;
+    border-radius:10px;
+
+    background:#f30b01;
+    color:white;
+
+    font-size:16px;
+    font-weight:bold;
+
+    cursor:pointer;
+    transition:0.2s;
+
+    box-shadow:0 0 15px rgba(243,11,1,0.5);
+}
+
+.videos-button:hover{
+    transform:scale(1.08);
+    background:#ff241a;
+}
+
+
+    
 button{
     flex:1;
     padding:12px;
@@ -152,7 +180,9 @@ function startMusic(){
     music.volume = 0.2;
 </script>
 
-
+<button class="videos-button">
+    Videos
+</button>
 
 </body>
 </html>
