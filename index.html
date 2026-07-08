@@ -135,9 +135,18 @@ i want to learn how to code ig bro<br><br>
     
 </div>
 
-<audio controls loop>
+<audio id="music" loop>
     <source src="music.mp3" type="audio/mpeg">
 </audio>
+
+<button id="playButton" onclick="startMusic()">🎵 Enter</button>
+
+<script>
+function startMusic(){
+    document.getElementById("music").play();
+    document.getElementById("playButton").style.display="none";
+}
+</script>
 
 </body>
 </html>
