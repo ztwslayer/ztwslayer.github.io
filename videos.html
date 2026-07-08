@@ -112,7 +112,16 @@ allowfullscreen>
     <button class="home-button" onclick="goToPage('index.html')">
     Home
 </button>
-    
+
+    <script>
+function goToPage(page){
+    document.body.style.opacity = "0";
+
+    setTimeout(() => {
+        window.location.href = page;
+    }, 400);
+}
+</script>
     
 </body>
 
