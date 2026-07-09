@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,27 +8,6 @@
 
 <style>
 
-body{
-    opacity:1;
-    transition:opacity 0.4s ease;
-}
-    
-body{
-    animation: fadeIn 0.4s ease-in;
-}
-
-@keyframes fadeIn{
-    from{
-        opacity:0;
-    }
-
-    to{
-        opacity:1;
-    }
-}
-
-
-    
 body{
     background:#050505;
     color:white;
@@ -42,10 +20,35 @@ body{
     padding:40px 0;
 
     font-family:Arial, Helvetica, sans-serif;
+
+    opacity:1;
+    transition:opacity 0.4s ease;
+    animation:fadeIn 0.4s ease-in;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
+
+.videos-container{
+    display:flex;
+    flex-direction:column;
+    gap:30px;
+    align-items:center;
 }
 
 .video-card{
-    animation: cardFade 0.5s ease;
+    background:#232428;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 0 20px rgba(0,0,0,.5);
+    animation:cardFade .5s ease;
 }
 
 @keyframes cardFade{
@@ -53,57 +56,30 @@ body{
         opacity:0;
         transform:translateY(20px);
     }
-
     to{
         opacity:1;
         transform:translateY(0);
     }
 }
-    
-    
-    .video-card{
-    background:#232428;
-    padding:25px;
-    border-radius:15px;
-    text-align:center;
-    box-shadow:0 0 20px rgba(0,0,0,0.5);
-}
 
 .video-card h2{
-    text-align:center;
     margin-bottom:20px;
-    color:white;
 }
 
-<div class="video-card">
+iframe{
+    width:560px;
+    height:315px;
+    border:none;
+    border-radius:10px;
+}
 
-<h2>Calmest Deltarune Chapter 5 Reaction</h2>
-
-<iframe 
-src="https://www.youtube.com/embed/dJj96SC2E7Y&t=280s"
-allowfullscreen>
-</iframe>
-
-</div>
-
-
-    <div class="video-card">
-
-<h2>My FIRST two matches of Fortnite Chapter 7 Season 3!n</h2>
-
-<iframe 
-src="https://www.youtube.com/embed/dJj96SC2E7Y&t=280s"
-allowfullscreen>
-</iframe>
-
-</div> 
-    
 .home-button{
     position:fixed;
     bottom:25px;
     right:25px;
 
     padding:12px 25px;
+
     border:none;
     border-radius:10px;
 
@@ -114,6 +90,7 @@ allowfullscreen>
     font-weight:bold;
 
     cursor:pointer;
+    transition:.2s;
 }
 
 .home-button:hover{
@@ -121,32 +98,32 @@ allowfullscreen>
     background:#ff241a;
 }
 
-    .videos-container{
-    display:flex;
-    flex-direction:column;
-    gap:25px;
-}
-    
-iframe{
-    width:560px;
-    height:315px;
-    border-radius:10px;
-    border:none;
-}
 </style>
-
 </head>
 
 <body>
 
-<div class="video-card">
+<div class="videos-container">
 
-<h2>Our FIRST Match in Chapter 7 Season 2… (Fortnite)/h2>
+    <div class="video-card">
+        <h2>Our FIRST Match in Chapter 7 Season 2… (Fortnite)</h2>
 
-<iframe 
-src="https://www.youtube.com/embed/02feHqu-ByU&t=8s"
-allowfullscreen>
-</iframe>
+        <iframe
+        src="https://www.youtube.com/embed/dJj96SC2E7Y"
+        title="Fortnite Video"
+        allowfullscreen>
+        </iframe>
+    </div>
+
+    <div class="video-card">
+        <h2>Calmest Deltarune Chapter 5 Reaction</h2>
+
+        <iframe
+        src="https://www.youtube.com/embed/FL_dCjirKgE"
+        title="Deltarune Video"
+        allowfullscreen>
+        </iframe>
+    </div>
 
 </div>
 
@@ -154,7 +131,6 @@ allowfullscreen>
     Home
 </button>
 
-
 <script>
 function goToPage(page){
     document.body.style.opacity = "0";
@@ -164,40 +140,6 @@ function goToPage(page){
     }, 400);
 }
 </script>
-
-<script>
-function goToPage(page){
-    document.body.style.opacity = "0";
-
-    setTimeout(function(){
-        window.location.href = page;
-    }, 400);
-}
-</script>
-
-
-<div class="videos-container">
-
-   
-
-
-    <div class="video-card">
-        <h2>Our FIRST Match in Chapter 7 Season 2… (Fortnite)</h2>
-
-        <iframe 
-        src="https://www.youtube.com/embed/dJj96SC2E7Y&t=280s"
-        allowfullscreen>
-        </iframe>
-    </div>
-
-</div>
-
-<div class="video-card">
-<h2>Calmest Deltarune Chapter 5 Reaction</h2>
-<iframe ...></iframe>
-</div>
-
 
 </body>
-
 </html>
