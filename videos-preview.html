@@ -172,7 +172,20 @@
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 22px;
+      padding-bottom: clamp(60px, 8vw, 90px);
+    }
+
+    .shorts-section {
       padding-bottom: clamp(72px, 10vw, 120px);
+    }
+
+    .shorts-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 360px);
+    }
+
+    .short-media {
+      aspect-ratio: 9 / 16;
     }
 
     .video-card {
@@ -334,6 +347,7 @@
       .hero-copy { margin-top: 22px; }
       .section-heading { align-items: start; flex-direction: column; gap: 4px; }
       .video-grid { grid-template-columns: 1fr; gap: 18px; }
+      .shorts-grid { grid-template-columns: minmax(0, 1fr); }
       .video-card { border-radius: 18px; }
       .play-icon { width: 60px; height: 60px; }
       .card-copy { padding: 18px; }
@@ -357,6 +371,7 @@
         ztw
       </a>
       <div class="nav-links">
+        <a class="nav-link" href="#shorts">Shorts</a>
         <a class="nav-link youtube-link" href="https://www.youtube.com/@ztwslayer" target="_blank" rel="noopener">YouTube</a>
         <a class="nav-link" href="https://ztwslayer.github.io/">Home</a>
       </div>
@@ -367,20 +382,48 @@
     <section class="hero shell" aria-labelledby="page-title">
       <div class="preview-label">Temporary concept preview</div>
       <h1 id="page-title">Latest<br><span>videos.</span></h1>
-      <p class="hero-copy">Fortnite, Deltarune, and whatever comes next. Pick a video and press play—the player loads only when you’re ready.</p>
+      <p class="hero-copy">Every public upload, newest first. Pick a video and press play—the player loads only when you’re ready.</p>
     </section>
 
     <section class="shell" aria-labelledby="featured-title">
       <div class="section-heading">
         <h2 id="featured-title">Featured uploads</h2>
-        <p>2 videos</p>
+        <p>6 videos</p>
       </div>
 
       <div class="video-grid">
         <article class="video-card">
           <div class="media-frame">
-            <button class="video-trigger" type="button" data-video-id="dJj96SC2E7Y" data-video-title="Our FIRST Match in Chapter 7 Season 2… (Fortnite)" aria-label="Play Our FIRST Match in Chapter 7 Season 2… (Fortnite)">
-              <img src="https://i.ytimg.com/vi/dJj96SC2E7Y/hqdefault.jpg" alt="" width="480" height="360" loading="eager" fetchpriority="high">
+            <button class="video-trigger" type="button" data-video-id="FL_dCjirKgE" data-video-title="Calmest Deltarune Chapter 5 Reaction" aria-label="Play Calmest Deltarune Chapter 5 Reaction">
+              <img src="https://i.ytimg.com/vi/FL_dCjirKgE/hqdefault.jpg" alt="" width="480" height="360" loading="eager" fetchpriority="high">
+              <span class="play-icon" aria-hidden="true"></span>
+            </button>
+          </div>
+          <div class="card-copy">
+            <p class="eyebrow">Deltarune</p>
+            <h3 class="video-title">Calmest Deltarune Chapter 5 Reaction</h3>
+            <div class="card-meta">Watch on this page</div>
+          </div>
+        </article>
+
+        <article class="video-card">
+          <div class="media-frame">
+            <button class="video-trigger" type="button" data-video-id="dJj96SC2E7Y" data-video-title="My FIRST two matches of Fortnite Chapter 7 Season 3!" aria-label="Play My FIRST two matches of Fortnite Chapter 7 Season 3!">
+              <img src="https://i.ytimg.com/vi/dJj96SC2E7Y/hqdefault.jpg" alt="" width="480" height="360" loading="lazy">
+              <span class="play-icon" aria-hidden="true"></span>
+            </button>
+          </div>
+          <div class="card-copy">
+            <p class="eyebrow">Fortnite</p>
+            <h3 class="video-title">My FIRST two matches of Fortnite Chapter 7 Season 3!</h3>
+            <div class="card-meta">Watch on this page</div>
+          </div>
+        </article>
+
+        <article class="video-card">
+          <div class="media-frame">
+            <button class="video-trigger" type="button" data-video-id="02feHqu-ByU" data-video-title="Our FIRST Match in Chapter 7 Season 2… (Fortnite)" aria-label="Play Our FIRST Match in Chapter 7 Season 2… (Fortnite)">
+              <img src="https://i.ytimg.com/vi/02feHqu-ByU/hqdefault.jpg" alt="" width="480" height="360" loading="lazy">
               <span class="play-icon" aria-hidden="true"></span>
             </button>
           </div>
@@ -393,14 +436,64 @@
 
         <article class="video-card">
           <div class="media-frame">
-            <button class="video-trigger" type="button" data-video-id="FL_dCjirKgE" data-video-title="Calmest Deltarune Chapter 5 Reaction" aria-label="Play Calmest Deltarune Chapter 5 Reaction">
-              <img src="https://i.ytimg.com/vi/FL_dCjirKgE/hqdefault.jpg" alt="" width="480" height="360" loading="lazy">
+            <button class="video-trigger" type="button" data-video-id="ulaxxXek9NU" data-video-title="Our LAST Match of Chapter 7 Season 1... (Fortnite)" aria-label="Play Our LAST Match of Chapter 7 Season 1... (Fortnite)">
+              <img src="https://i.ytimg.com/vi/ulaxxXek9NU/hqdefault.jpg" alt="" width="480" height="360" loading="lazy">
               <span class="play-icon" aria-hidden="true"></span>
             </button>
           </div>
           <div class="card-copy">
-            <p class="eyebrow">Deltarune</p>
-            <h3 class="video-title">Calmest Deltarune Chapter 5 Reaction</h3>
+            <p class="eyebrow">Fortnite</p>
+            <h3 class="video-title">Our LAST Match of Chapter 7 Season 1... (Fortnite)</h3>
+            <div class="card-meta">Watch on this page</div>
+          </div>
+        </article>
+
+        <article class="video-card">
+          <div class="media-frame">
+            <button class="video-trigger" type="button" data-video-id="Fg-pVdRssVE" data-video-title="This was &quot;totally&quot; the intended way" aria-label="Play This was totally the intended way">
+              <img src="https://i.ytimg.com/vi/Fg-pVdRssVE/hqdefault.jpg" alt="" width="480" height="360" loading="lazy">
+              <span class="play-icon" aria-hidden="true"></span>
+            </button>
+          </div>
+          <div class="card-copy">
+            <p class="eyebrow">Gaming</p>
+            <h3 class="video-title">This was “totally” the intended way</h3>
+            <div class="card-meta">Watch on this page</div>
+          </div>
+        </article>
+
+        <article class="video-card">
+          <div class="media-frame">
+            <button class="video-trigger" type="button" data-video-id="YMJRNACb9YY" data-video-title="The Legend of Zelda: Tears of The Kingdom Main Theme" aria-label="Play The Legend of Zelda: Tears of The Kingdom Main Theme">
+              <img src="https://i.ytimg.com/vi/YMJRNACb9YY/hqdefault.jpg" alt="" width="480" height="360" loading="lazy">
+              <span class="play-icon" aria-hidden="true"></span>
+            </button>
+          </div>
+          <div class="card-copy">
+            <p class="eyebrow">Zelda</p>
+            <h3 class="video-title">The Legend of Zelda: Tears of The Kingdom Main Theme</h3>
+            <div class="card-meta">Watch on this page</div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="shorts-section shell" id="shorts" aria-labelledby="shorts-title">
+      <div class="section-heading">
+        <h2 id="shorts-title">Shorts</h2>
+        <p>1 short</p>
+      </div>
+      <div class="shorts-grid">
+        <article class="video-card">
+          <div class="media-frame short-media">
+            <button class="video-trigger" type="button" data-video-id="h9LxEfRFOII" data-video-title="Calmest Reaction to this bro 😭" aria-label="Play Calmest Reaction to this bro">
+              <img src="https://i.ytimg.com/vi/h9LxEfRFOII/hqdefault.jpg" alt="" width="480" height="360" loading="lazy">
+              <span class="play-icon" aria-hidden="true"></span>
+            </button>
+          </div>
+          <div class="card-copy">
+            <p class="eyebrow">Short</p>
+            <h3 class="video-title">Calmest Reaction to this bro 😭</h3>
             <div class="card-meta">Watch on this page</div>
           </div>
         </article>
