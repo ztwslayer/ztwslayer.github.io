@@ -4,27 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ztwslayer's website</title>
+<link rel="stylesheet" href="site.css">
 
-<style>
-
-body{
-    opacity:1;
-    transition:opacity 0.4s ease;
-}
-    
-    body{
-    animation: fadeIn 0.4s ease-in;
-}
-
-@keyframes fadeIn{
-    from{
-        opacity:0;
-    }
-
-    to{
-        opacity:1;
-    }
-}
+<style id="page-styles">
     
 *{
     margin:0;
@@ -124,6 +106,9 @@ body{
     transition:0.2s;
 
     box-shadow:0 0 15px rgba(243,11,1,0.5);
+    display:inline-flex;
+    align-items:center;
+    text-decoration:none;
 }
 
 .videos-button:hover{
@@ -152,6 +137,8 @@ button:hover{
 
 </head>
 <body>
+
+<div class="site-content" data-site-content>
 
 <div class="card">
 
@@ -182,41 +169,21 @@ i want to learn how to code ig bro<br><br>
         </div>
     
 </div>
-<script>
-function startMusic(){
-    document.getElementById("music").play();
-    document.getElementById("playButton").style.display="none";
-}
-</script>
-    
-<audio id="music" loop>
-    <source src="Beneath the Mask -rain-.mp3" type="audio/mpeg">
-</audio>
+</div>
 
-<button id="playButton" onclick="startMusic()">Music</button>
+<a class="videos-button" href="videos.html">Videos</a>
+</div>
 
-    <script>
-    const music = document.getElementById("music");
-    music.volume = 0.2;
-</script>
+<aside class="music-dock" aria-label="Music player">
+    <audio id="site-music" loop preload="metadata" src="Beneath the Mask -rain-.mp3"></audio>
+    <button class="music-toggle" id="music-toggle" type="button" aria-pressed="false">Play music</button>
+    <span class="music-title">Beneath the Mask -rain-</span>
+    <label class="visually-hidden" for="music-volume">Volume</label>
+    <input class="music-volume" id="music-volume" type="range" min="0" max="1" step="0.05" value="0.2" aria-label="Music volume">
+    <span class="visually-hidden" id="music-status" aria-live="polite"></span>
+</aside>
 
-<button class="videos-button">
-    Videos
-</button>
-
-    <button class="videos-button" onclick="window.location.href='videos.html'">
-    Videos
-</button>
-
-    <script>
-function goToPage(page){
-    document.body.style.opacity = "0";
-
-    setTimeout(() => {
-        window.location.href = page;
-    }, 400);
-}
-</script>
+<script src="site.js" defer></script>
 
 </body>
 </html>

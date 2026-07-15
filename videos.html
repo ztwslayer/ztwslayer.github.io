@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="dark">
   <title>Videos — ztw</title>
-  <style>
+  <link rel="stylesheet" href="site.css">
+  <style id="page-styles">
     :root {
       --red: #f13024;
       --red-deep: #9f120d;
@@ -339,6 +340,7 @@
   </style>
 </head>
 <body>
+  <div class="site-content" data-site-content>
   <header class="site-header">
     <nav class="nav shell" aria-label="Main navigation">
       <a class="brand" href="index.html">
@@ -481,21 +483,17 @@
       <p>All public uploads • newest first</p>
     </div>
   </footer>
+  </div>
 
-  <script>
-    document.addEventListener("click", function (event) {
-      const trigger = event.target.closest(".video-trigger");
-      if (!trigger) return;
+  <aside class="music-dock" aria-label="Music player">
+    <audio id="site-music" loop preload="metadata" src="Beneath the Mask -rain-.mp3"></audio>
+    <button class="music-toggle" id="music-toggle" type="button" aria-pressed="false">Play music</button>
+    <span class="music-title">Beneath the Mask -rain-</span>
+    <label class="visually-hidden" for="music-volume">Volume</label>
+    <input class="music-volume" id="music-volume" type="range" min="0" max="1" step="0.05" value="0.2" aria-label="Music volume">
+    <span class="visually-hidden" id="music-status" aria-live="polite"></span>
+  </aside>
 
-      const frame = document.createElement("iframe");
-      frame.className = "video-frame";
-      frame.src = "https://www.youtube-nocookie.com/embed/" + encodeURIComponent(trigger.dataset.videoId) + "?autoplay=1&rel=0";
-      frame.title = trigger.dataset.videoTitle;
-      frame.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
-      frame.referrerPolicy = "strict-origin-when-cross-origin";
-      frame.allowFullscreen = true;
-      trigger.replaceWith(frame);
-    });
-  </script>
+  <script src="site.js" defer></script>
 </body>
 </html>
